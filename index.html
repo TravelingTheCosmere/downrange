@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Downrange</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header id="top">
+        <div id="brand">
+          <div class="mark">DOWNRANGE</div>
+          <div class="sub">Northline · NL-9 · Skiff-1</div>
+        </div>
+        <div id="clockblock">
+          <div id="clock">T-00:10:00</div>
+          <div id="phase">Count</div>
+        </div>
+        <div id="meters"></div>
+        <div id="rates">
+          <button type="button" data-rate="1">1×</button>
+          <button type="button" data-rate="8">8×</button>
+          <button type="button" data-rate="24">24×</button>
+          <button type="button" id="btn-run">To next call</button>
+          <button type="button" id="btn-pause">Pause</button>
+          <button type="button" id="btn-mute">Sound</button>
+        </div>
+        <nav id="seats"></nav>
+      </header>
+      <div id="stage">
+        <canvas id="view"></canvas>
+        <div id="views">
+          <button type="button" data-view="pad">Pad</button>
+          <button type="button" data-view="track">Track</button>
+          <button type="button" data-view="cabin">Cabin</button>
+          <button type="button" data-view="booster">Booster</button>
+          <button type="button" data-view="room">Room</button>
+        </div>
+        <div id="cockpit" hidden></div>
+        <div id="hold" hidden></div>
+      </div>
+      <aside id="side">
+        <div id="cards"></div>
+        <div id="dock">
+          <div id="seathead"></div>
+          <div id="telem"></div>
+        </div>
+      </aside>
+      <section id="loop">
+        <div class="loophd">Voice loop</div>
+        <div id="lines"></div>
+      </section>
+      <div id="cover">
+        <div class="cover-card">
+          <div class="eyebrow">Northline flight test</div>
+          <h1>Downrange</h1>
+          <p>
+            You are the whole loop. Skiff-1 is a crewed flight on the NL-9.
+            Sit each seat, make the call, and get the booster onto Bay One.
+          </p>
+          <ol>
+            <li>A lit seat opens on its own. Keys 1–9 still jump there.</li>
+            <li>The count holds if a gate is late. N runs you to the next call.</li>
+            <li>In the cabin, work the gauges. V cycles the outside views.</li>
+          </ol>
+          <button type="button" id="start">Start the count</button>
+        </div>
+      </div>
+      <div id="debrief" hidden></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
